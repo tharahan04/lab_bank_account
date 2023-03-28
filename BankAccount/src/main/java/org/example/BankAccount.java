@@ -12,7 +12,7 @@ public class BankAccount {
     private double interest;
 
 
-    //    Constructor
+//     Constructor
     public BankAccount(String inputfirstName, String inputlastName, LocalDate dateOfBirth, int accountNumber){
             this.firstName = inputfirstName;
             this.lastName = inputlastName;
@@ -21,8 +21,7 @@ public class BankAccount {
             this.balance = 0;
     }
 
-
-    //        Methods
+//     Methods
             public String generateStatement(){
                 return "Hello " + this.firstName +" " +  this.lastName + "! Date of Birth : " + this.dateOfBirth + ". Account Number : " + this.accountNumber + "." ;
 
@@ -32,7 +31,7 @@ public class BankAccount {
         balance = balance + amount;
     }                             //display full balance
 
-//    Withdrawal
+//     Withdrawal
     public void withdrawal(double amount){
         balance = balance - amount;
     }
