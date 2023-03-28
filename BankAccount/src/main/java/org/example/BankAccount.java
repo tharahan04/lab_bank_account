@@ -21,32 +21,75 @@ public class BankAccount {
             this.balance = 0;
     }
 
-//     Methods
-            public String generateStatement(){
-                return "Hello " + this.firstName +" " +  this.lastName + "! Date of Birth : " + this.dateOfBirth + ". Account Number : " + this.accountNumber + "." ;
+    //    Getters/Setters
+    public String getFirstName() {
+        return firstName;
+    }
 
-            }
-//     Deposit
-    public void deposit(double amount) {
-        balance = balance + amount;
-    }                             //display full balance
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-//     Withdrawal
-    public void withdrawal(double amount){
-        balance = balance - amount;
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(int accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
 
-//    Interest Method
-    public void payInterest(double interestRates){
+//     Deposit
+        public void deposit(double amount) {
+            balance = balance + amount;
+        }                             //display full balance
+
+//     Withdrawal
+        public void withdrawal(double amount){
+            balance = balance - amount;
+        }
+
+//     Interest Method
+    public void payInterest(double interestRates) {
         interest = balance * interestRates;
         balance = balance + interest;
     }
 
-//    Getters/Setters
-    public double getBalance() {
-        return balance;
-    }
+        public String generateStatement(){
+            return "My name is " + this.firstName + " " + this.lastName + "." + " My Date of birth is "
+                    + this.dateOfBirth;
+        }
+
+
+
+
+
+
+
 }
 
 
