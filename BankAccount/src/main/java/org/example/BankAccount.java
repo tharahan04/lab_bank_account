@@ -9,6 +9,7 @@ public class BankAccount {
     private LocalDate dateOfBirth;
     private int accountNumber;
     private double balance;
+    private double interest;
 
 
     //    Constructor
@@ -31,20 +32,23 @@ public class BankAccount {
         balance = balance + amount;
     }                             //display full balance
 
-//    Withdrawal 
-
-
-
-
-
-
-
-
-
-
-
-
+//    Withdrawal
+    public void withdrawal(double amount){
+        balance = balance - amount;
     }
+
+
+//    Interest Method
+    public void payInterest(double interestRates){
+        interest = balance * interestRates;
+        balance = balance + interest;
+    }
+
+//    Getters/Setters
+    public double getBalance() {
+        return balance;
+    }
+}
 
 
 
